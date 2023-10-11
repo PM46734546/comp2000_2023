@@ -14,9 +14,22 @@ public class Main extends JFrame{
 
     }
 
-    private Main(){
+    class Canvas extends JPanel{
+        public Canvas(){
 
+        setPreferredSize(new Dimension(720, 720));
+
+        }
+
+    }
+
+    private Main(){
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Canvas canvas = new Canvas();
+        this.setContentPane(canvas);
+        this.pack();
         this.setVisible(true);
+       
 
     }
 
